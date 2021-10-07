@@ -1,0 +1,22 @@
+name: "Policy Push"
+description: "Push policy image to registry"
+author: "Aserto Inc."
+branding:
+  icon: skip-forward
+  color: blue
+inputs:
+  tag:
+    description: "image tag to be pushed"
+    required: true
+  server:
+    description: "registry service hostname"
+    required: true
+    default: "opcr.io"
+  verbosity:
+    description: "verbosity level [info|error|debug|trace]"
+    required: true
+    default: error
+runs:
+  using: docker
+  image: 'docker://ghcr.io/opcr-io/policy:latest'
+  entrypoint: /app/push.sh
