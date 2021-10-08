@@ -13,12 +13,6 @@ Push (publish) policy image to registry.
 
 Default: empty
 
-### `server`
-
-**Required** The registry service hostname. 
-
-Default: `opcr.io`
-
 ### `verbosity`
 
 **Required** The logging verbosity level [ `info` | `error` | `debug` | `trace` ] used.

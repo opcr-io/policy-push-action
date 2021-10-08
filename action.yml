@@ -8,10 +8,6 @@ inputs:
   tag:
     description: "image tag to be pushed"
     required: true
-  server:
-    description: "registry service hostname"
-    required: true
-    default: "opcr.io"
   verbosity:
     description: "verbosity level [info|error|debug|trace]"
     required: true
