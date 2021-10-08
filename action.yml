@@ -18,5 +18,5 @@ inputs:
     default: error
 runs:
   using: docker
-  image: 'docker://ghcr.io/opcr-io/policy:latest'
+  image: 'docker://ghcr.io/opcr-io/policy:0.0'
   entrypoint: /app/push.sh
