@@ -5,8 +5,8 @@ branding:
   icon: skip-forward
   color: blue
 inputs:
-  tag:
-    description: "image tag to be pushed"
+  tags:
+    description: "one or more image tags to be pushed"
     required: true
   verbosity:
     description: "verbosity level [info|error|debug|trace]"
@@ -14,5 +14,5 @@ inputs:
     default: error
 runs:
   using: docker
-  image: 'docker://ghcr.io/opcr-io/policy:0.0'
+  image: 'docker://ghcr.io/opcr-io/policy:0.1'
   entrypoint: /app/push.sh
