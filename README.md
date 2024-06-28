@@ -42,11 +42,11 @@ jobs:
     name: build
     steps:
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Policy Login
       id: policy-login
-      uses: opcr-io/policy-login-action@v1
+      uses: opcr-io/policy-login-action@v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -55,7 +55,7 @@ jobs:
 
     - name: Policy Build
       id: policy-build
-      uses: opcr-io/policy-build-action@v2
+      uses: opcr-io/policy-build-action@v3
       with:
         src: peoplefinder/src
         tags: datadude/peoplefinder:$(sver -n patch)
@@ -63,12 +63,12 @@ jobs:
 
     - name: Policy Push
       id: policy-push
-      uses: opcr-io/policy-push-action@v2
+      uses: opcr-io/policy-push-action@v3
       with:
         tag: datadude/peoplefinder:$(sver -n patch)
 
     - name: Policy Logout
       id: policy-logout
-      uses: opcr-io/policy-logout-action@v2
+      uses: opcr-io/policy-logout-action@v3
 
 ```
