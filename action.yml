@@ -1,6 +1,6 @@
 name: "Policy Push"
 description: "Push policy image to registry"
-author: "Aserto Inc."
+author: "gert@d5s.io"
 branding:
   icon: skip-forward
   color: blue
@@ -14,5 +14,5 @@ inputs:
     default: error
 runs:
   using: docker
-  image: 'docker://ghcr.io/opcr-io/policy:0.2'
+  image: 'docker://ghcr.io/opcr-io/policy:0.4'
   entrypoint: /app/push.sh
